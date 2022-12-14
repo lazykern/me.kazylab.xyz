@@ -22,14 +22,14 @@ export default function Home() {
               variant="h1"
               fontWeight="400"
               color="primary"
-              fontSize={{ xs: "3rem", md: "4rem" }}
+              fontSize={{ xs: "2.5rem", md: "3.5rem" }}
             >
               Phusit Somboonyingsuk
             </Typography>
             <Typography
               variant="h3"
               paddingBottom="20px"
-              fontSize={{ xs: "2rem", md: "3rem" }}
+              fontSize={{ xs: "2rem", md: "2.5rem" }}
             >
               Computer Engineering Student, Kasetsart University
             </Typography>
