@@ -13,15 +13,24 @@ export default function Home() {
         sx={{
           justifyContent: "center",
           marginTop: { xs: "200px", md: "80px" },
-          padding: "0 20px",
+          padding: "0 30px",
         }}
       >
         <Stack textAlign="left" spacing={10}>
           <Stack>
-            <Typography variant="h1" fontWeight="400" color="primary">
+            <Typography
+              variant="h1"
+              fontWeight="400"
+              color="primary"
+              fontSize={{ xs: "3rem", md: "4rem" }}
+            >
               Phusit Somboonyingsuk
             </Typography>
-            <Typography variant="h3" paddingBottom="20px">
+            <Typography
+              variant="h3"
+              paddingBottom="20px"
+              fontSize={{ xs: "2rem", md: "3rem" }}
+            >
               Computer Engineering Student, Kasetsart University
             </Typography>
             <Typography variant="body1" paddingBottom="20px">
