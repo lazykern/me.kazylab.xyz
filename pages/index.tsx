@@ -16,10 +16,6 @@ export default function Home() {
 
           <p>this website is currently under development, please stand by.</p>
         </main>
-
-        <footer className={styles.footer}>
-          <p>help</p>
-        </footer>
       </div>
     </>
   );
