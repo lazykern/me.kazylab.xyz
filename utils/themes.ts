@@ -1,4 +1,12 @@
 import { createTheme } from "@mui/material/styles";
+import { TypographyOptions } from "@mui/material/styles/createTypography";
+
+const typography: TypographyOptions = {
+  fontFamily: ["Ubuntu", "sans-serif"].join(","),
+  body1: {
+    fontSize: "1.2rem",
+  },
+};
 
 export const lightTheme = createTheme({
   palette: {
@@ -15,6 +23,7 @@ export const lightTheme = createTheme({
       disabled: "#303030",
     },
   },
+  typography,
 });
 
 export const darkTheme = createTheme({
@@ -36,4 +45,5 @@ export const darkTheme = createTheme({
       disabled: "#303030",
     },
   },
+  typography,
 });
