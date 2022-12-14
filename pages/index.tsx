@@ -12,7 +12,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          welcome to phusitsom's portfolio
+          welcome to phusitsom&apos;s portfolio
         </h1>
 
         <p>this website is in development, please stand by.</p>
