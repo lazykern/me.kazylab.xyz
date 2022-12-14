@@ -1,10 +1,6 @@
-# phusitsom.me
+# phusitsom.me (in development)
 
-My own personal website.
-
-## State
-
-Development
+My own personal website
 
 ## Development
 
