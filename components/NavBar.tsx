@@ -66,7 +66,7 @@ function NavBar() {
         top: { xs: "auto", md: 0 },
         bottom: { xs: 0, md: "auto" },
         background: "inherit",
-        color: "inherit",
+        color: "text.primary",
       }}
     >
       <Container maxWidth="xl">
@@ -102,11 +102,13 @@ function NavBar() {
           >
             phusitsom
           </Typography>
-          {pages.map((page) => (
-            <Button key={page} sx={{ marginTop: "5px" }}>
-              {page}
-            </Button>
-          ))}
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button key={page} sx={{ marginTop: "5px" }}>
+                {page}
+              </Button>
+            ))}
+          </Box>
 
           <Box sx={{ flexGrow: 1 }}></Box>
           <Box sx={{ flexGrow: 0 }}>
@@ -119,10 +121,12 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleModalOpen}
-              color="inherit"
               disableRipple
               disableFocusRipple
               disableTouchRipple
+              sx={{
+                color: "text.primary",
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -154,9 +158,9 @@ function NavBar() {
               <Stack spacing={2}>
                 {pages.map((page) => (
                   <Button
-                    color="inherit"
                     key={page}
                     sx={{
+                      color: "text.primary",
                       fontWeight: 700,
                       fontSize: "1.5rem",
                     }}
