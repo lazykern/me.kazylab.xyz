@@ -3,7 +3,6 @@ import { ThemeProvider } from "@mui/material";
 import { useTheme } from "next-themes";
 import React, { Fragment } from "react";
 import NavBar from "./NavBar";
-import Footer from "./Footer";
 
 import { lightTheme, darkTheme } from "../utils/themes";
 import { Box } from "@mui/system";
