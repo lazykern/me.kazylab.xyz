@@ -65,8 +65,8 @@ function NavBar() {
         boxShadow: "none",
         top: { xs: "auto", md: 0 },
         bottom: { xs: 0, md: "auto" },
-        background: "inherit",
-        color: "inherit",
+        color: "text.primary",
+        background: "var(--background)",
       }}
     >
       <Container maxWidth="xl">
@@ -98,15 +98,18 @@ function NavBar() {
               fontWeight: 700,
               letterSpacing: ".2rem",
               textDecoration: "none",
+              color: "text.primary",
             }}
           >
             phusitsom
           </Typography>
-          {pages.map((page) => (
-            <Button key={page} sx={{ marginTop: "5px" }}>
-              {page}
-            </Button>
-          ))}
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button key={page} sx={{ marginTop: "5px" }}>
+                {page}
+              </Button>
+            ))}
+          </Box>
 
           <Box sx={{ flexGrow: 1 }}></Box>
           <Box sx={{ flexGrow: 0 }}>
@@ -119,10 +122,12 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleModalOpen}
-              color="inherit"
               disableRipple
               disableFocusRipple
               disableTouchRipple
+              sx={{
+                color: "text.primary",
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -154,14 +159,21 @@ function NavBar() {
               <Stack spacing={2}>
                 {pages.map((page) => (
                   <Button
-                    color="inherit"
                     key={page}
                     sx={{
+                      color: "text.primary",
                       fontWeight: 700,
                       fontSize: "1.5rem",
                     }}
                   >
-                    {page}
+                    <Typography
+                      sx={{
+                        textDecoration:
+                          page === "webring" ? "line-through" : "none",
+                      }}
+                    >
+                      {page}
+                    </Typography>
                   </Button>
                 ))}
               </Stack>
