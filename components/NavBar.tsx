@@ -13,6 +13,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 
 import { DarkMode, LightMode } from "@mui/icons-material";
 import { useTheme } from "next-themes";
+import { Avatar } from "@mui/material";
 
 const pages = [""];
 
@@ -73,7 +74,12 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Avatar
+            sx={{ mr: 2, borderRadius: 0 }}
+            alt="phusitsom"
+            className="invert-on-theme"
+            src="/images/icon.png"
+          />
           <Typography
             variant="h6"
             noWrap

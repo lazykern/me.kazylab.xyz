@@ -30,3 +30,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+[data-theme="dark"] .invert-on-theme {
+  filter: invert(1);
+}
