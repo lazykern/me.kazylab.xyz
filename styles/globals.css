@@ -31,6 +31,14 @@ a {
   box-sizing: border-box;
 }
 
+footer {
+  margin-top: 2rem;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
 [data-theme="dark"] .invert-on-theme {
   filter: invert(1);
 }
