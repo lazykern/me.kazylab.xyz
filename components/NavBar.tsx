@@ -65,8 +65,8 @@ function NavBar() {
         boxShadow: "none",
         top: { xs: "auto", md: 0 },
         bottom: { xs: 0, md: "auto" },
-        background: "inherit",
         color: "text.primary",
+        background: "var(--background)",
       }}
     >
       <Container maxWidth="xl">
@@ -98,6 +98,7 @@ function NavBar() {
               fontWeight: 700,
               letterSpacing: ".2rem",
               textDecoration: "none",
+              color: "text.primary",
             }}
           >
             phusitsom
@@ -165,7 +166,14 @@ function NavBar() {
                       fontSize: "1.5rem",
                     }}
                   >
-                    {page}
+                    <Typography
+                      sx={{
+                        textDecoration:
+                          page === "webring" ? "line-through" : "none",
+                      }}
+                    >
+                      {page}
+                    </Typography>
                   </Button>
                 ))}
               </Stack>
