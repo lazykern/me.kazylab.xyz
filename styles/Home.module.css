@@ -115,15 +115,15 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+[data-theme='dark'] .card,
+[data-theme='dark'] .footer {
+  border-color: #222;
+}
+
+[data-theme='dark'] .code {
+  background: #111;
+}
+
+[data-theme='dark'] .logo img {
+  filter: invert(1);
 }
