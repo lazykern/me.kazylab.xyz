@@ -1,5 +1,6 @@
-.container {
+.centercontainer {
   padding: 0 2rem;
+  text-align: center;
 }
 
 .main {
@@ -73,14 +74,5 @@
   .grid {
     width: 100%;
     flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .footer {
-    border-color: #222;
-  }
-  .logo img {
-    filter: invert(1);
   }
 }
