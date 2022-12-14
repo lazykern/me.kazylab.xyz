@@ -19,7 +19,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>dunno what to add to this footer</p>
+        <p>help</p>
       </footer>
     </div>
   )
