@@ -34,7 +34,7 @@ export default function Home() {
               Computer Engineering Student, Kasetsart University
             </Typography>
             <Typography variant="body1" paddingBottom="20px">
-              Specialze in data analysis, cloud computing, and data engineering
+              Specialize in data analysis, cloud computing, and data engineering
               (in progress).
             </Typography>
             <Typography variant="body1" paddingBottom="20px">
