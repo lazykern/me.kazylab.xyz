@@ -2,7 +2,6 @@ import { ChevronRight } from "@mui/icons-material";
 import { Container, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
-
 import { skillsData, bioData } from "../data";
 
 export default function Home() {
