@@ -1,11 +1,13 @@
-import { Container, ThemeProvider } from "@mui/material";
-
 import { useTheme } from "next-themes";
 import React, { Fragment } from "react";
+
+import { ThemeProvider } from "@mui/material";
+import { Box } from "@mui/system";
+
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 import { lightTheme, darkTheme } from "../utils/themes";
-import { Box } from "@mui/system";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { theme, systemTheme } = useTheme();
@@ -25,11 +27,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               marginTop: { xs: "0px", md: "64px" },
               marginBottom: { xs: "56px", md: "0px" },
               maxWidth: "1200px",
-              display: "flex",
               marginX: "auto",
             }}
           >
             <main>{children}</main>
+            <Footer />
           </Box>
         </Fragment>
       </ThemeProvider>
