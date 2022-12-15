@@ -7,7 +7,7 @@
   --secondary: #de4c7e;
   --text: #000000;
   --text-secondary: #000000;
-  --text-disabled: #303030;
+  --text-disabled: #757575;
 }
 
 [data-theme="dark"] {
@@ -17,7 +17,7 @@
   --secondary: #de4c7e;
   --text: #fff;
   --text-secondary: #fff;
-  --text-disabled: #303030;
+  --text-disabled: #949494;
 }
 
 html,
