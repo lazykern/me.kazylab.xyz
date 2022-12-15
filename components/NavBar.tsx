@@ -31,7 +31,7 @@ function NavBar() {
           <LightMode
             role="button"
             sx={{
-              color: "text.primary",
+              color: "var(--foreground)",
             }}
           />
         </IconButton>
@@ -46,7 +46,7 @@ function NavBar() {
           <DarkMode
             role="button"
             sx={{
-              color: "text.primary",
+              color: "var(--foreground)",
             }}
           />
         </IconButton>
@@ -65,7 +65,7 @@ function NavBar() {
         boxShadow: "none",
         top: { xs: "auto", md: 0 },
         bottom: { xs: 0, md: "auto" },
-        color: "text.primary",
+        color: "var(--foreground)",
         background: "var(--background)",
       }}
     >
@@ -98,7 +98,7 @@ function NavBar() {
               fontWeight: 700,
               letterSpacing: ".2rem",
               textDecoration: "none",
-              color: "text.primary",
+              color: "var(--foreground)",
             }}
           >
             phusitsom
@@ -126,7 +126,7 @@ function NavBar() {
               disableFocusRipple
               disableTouchRipple
               sx={{
-                color: "text.primary",
+                color: "var(--foreground)",
               }}
             >
               <MenuIcon />
@@ -161,7 +161,7 @@ function NavBar() {
                   <Button
                     key={page}
                     sx={{
-                      color: "text.primary",
+                      color: "var(--foreground)",
                       fontWeight: 700,
                       fontSize: "1.5rem",
                     }}
