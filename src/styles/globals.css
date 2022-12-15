@@ -3,11 +3,21 @@
 :root {
   --background: #fff;
   --foreground: #0f1419;
+  --primary: #3b57bb;
+  --secondary: #de4c7e;
+  --text: #000000;
+  --text-secondary: #000000;
+  --text-disabled: #303030;
 }
 
 [data-theme="dark"] {
   --background: #000;
   --foreground: #d6d9db;
+  --primary: #3b57bb;
+  --secondary: #de4c7e;
+  --text: #fff;
+  --text-secondary: #fff;
+  --text-disabled: #303030;
 }
 
 html,
@@ -29,14 +39,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-footer {
-  margin-top: 2rem;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  position: absolute;
 }
 
 [data-theme="dark"] .invert-on-theme {
