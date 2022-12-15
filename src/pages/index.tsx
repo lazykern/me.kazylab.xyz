@@ -1,4 +1,5 @@
-import { Stack, Typography } from "@mui/material";
+import { ChevronRight } from "@mui/icons-material";
+import { Container, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
 
@@ -9,10 +10,10 @@ export default function Home() {
         <title>phusitsom</title>
         <meta name="description" content="Homepage" />
       </Head>
-      <Box
+      <Container
         sx={{
           justifyContent: "center",
-          marginTop: { xs: "200px", md: "80px" },
+          marginTop: { xs: "100px", md: "80px" },
           padding: "0 30px",
         }}
       >
@@ -29,7 +30,7 @@ export default function Home() {
             <Typography
               variant="h3"
               paddingBottom="20px"
-              fontSize={{ xs: "2rem", md: "2.5rem" }}
+              fontSize={{ xs: "2rem", md: "2.2rem" }}
             >
               Computer Engineering Student, Kasetsart University
             </Typography>
@@ -44,8 +45,122 @@ export default function Home() {
               Open to work as a data engineer intern.
             </Typography>
           </Stack>
+          <Stack spacing={3}>
+            <Typography variant="h2" color="primary">
+              Skills
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "10px",
+                flexDirection: { xs: "column", md: "row" },
+              }}
+            >
+              <Box width={{ xs: "100%", md: "35%" }}>
+                <Typography variant="h3" marginLeft={{ xs: "15px", md: "0px" }}>
+                  Core
+                </Typography>
+              </Box>
+              <Stack
+                sx={{
+                  textAlign: "left",
+                  alignSelf: "center",
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight />
+                  Data Analysis
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight />
+                  Cloud Computing
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight />
+                  Software Engineering
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight />
+                  Data Engineering
+                </Typography>
+              </Stack>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "10px",
+                flexDirection: { xs: "column", md: "row" },
+              }}
+            >
+              <Box
+                sx={{
+                  width: { xs: "100%", md: "35%" },
+                  marginTop: { xs: "20px", md: "0" },
+                }}
+              >
+                <Typography variant="h3" marginLeft={{ xs: "15px", md: "0px" }}>
+                  Programming Languages
+                </Typography>
+              </Box>
+              <Stack
+                sx={{
+                  textAlign: "left",
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight fontSize="small" />
+                  Python
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight fontSize="small" />
+                  Rust
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight fontSize="small" />
+                  JavaScript/TypeScript
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight fontSize="small" />
+                  C/C++
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <ChevronRight fontSize="small" />
+                  Java
+                </Typography>
+              </Stack>
+            </Box>
+          </Stack>
         </Stack>
-      </Box>
+      </Container>
     </>
   );
 }
