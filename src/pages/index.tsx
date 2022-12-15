@@ -14,7 +14,7 @@ export default function Home() {
       <Container
         sx={{
           justifyContent: "center",
-          marginTop: { xs: "90px", md: "80px" },
+          marginTop: "90px",
           padding: "0 30px",
         }}
       >
@@ -43,7 +43,11 @@ export default function Home() {
             ))}
           </Stack>
           <Stack spacing={3}>
-            <Typography variant="h2" color="primary">
+            <Typography
+              variant="h2"
+              color="primary"
+              fontSize={{ xs: "2.5rem", md: "4rem" }}
+            >
               Skills
             </Typography>
             {skillsData.map((s) => (
