@@ -4,13 +4,20 @@ import { Collection } from "react-notion-x/build/third-party/collection";
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
 
-export async function getServerSideProps(context: any) {
+export async function getStaticProps(context: any) {
   const recordMap = await notion.getPage(context.params.id);
 
   return {
     props: {
       recordMap,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: true,
   };
 }
 
