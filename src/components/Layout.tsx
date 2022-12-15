@@ -30,7 +30,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               marginX: "auto",
             }}
           >
-            <main>{children}</main>
+            <main style={{ minHeight: "100vh" }}>{children}</main>
             <Footer />
           </Box>
         </Fragment>
