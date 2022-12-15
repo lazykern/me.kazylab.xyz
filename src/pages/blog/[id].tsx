@@ -16,8 +16,14 @@ export async function getStaticProps(context: any) {
 
 export async function getStaticPaths() {
   return {
-    paths: [],
-    fallback: false,
+    paths: [
+      {
+        params: {
+          id: "38a4a273da374dc987d3e415f9bb5e83",
+        },
+      },
+    ],
+    fallback: true,
   };
 }
 
