@@ -34,12 +34,14 @@ export default function Home() {
               Computer Engineering Student, Kasetsart University
             </Typography>
             <Typography variant="body1" paddingBottom="20px">
-              A second year computer engineering student at Kasetsart
-              University. Interested in Data Engineering and Software
-              Engineering.
+              Specialze in data analysis, cloud computing, and data engineering
+              (in progress).
             </Typography>
             <Typography variant="body1" paddingBottom="20px">
-              Open to work as a Data Engineer intern.
+              Interested in Data Engineering and Software Engineering.
+            </Typography>
+            <Typography variant="body1" paddingBottom="20px">
+              Open to work as a data engineer intern.
             </Typography>
           </Stack>
         </Stack>
