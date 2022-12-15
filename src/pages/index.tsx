@@ -2,18 +2,10 @@ import { ChevronRight } from "@mui/icons-material";
 import { Container, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
-import { fetchApi } from "../utils/fetchApi";
 
-import { Skills, SkillsData } from "./api/skills";
-import { BioData } from "./api/bio";
+import { skillsData, bioData } from "../data";
 
-export default function Home({
-  bioData,
-  skillsData,
-}: {
-  bioData: BioData;
-  skillsData: SkillsData;
-}) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -55,7 +47,7 @@ export default function Home({
             <Typography variant="h2" color="primary">
               Skills
             </Typography>
-            {skillsData.map((s: Skills) => (
+            {skillsData.map((s) => (
               <Box
                 key={s.type}
                 sx={{
@@ -92,29 +84,4 @@ export default function Home({
       </Container>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const bioRes = await fetchApi("bio");
-  var bioData = [];
-  try {
-    bioData = await bioRes.json();
-  } catch (e) {
-    console.log(e);
-  }
-
-  const skillsRes = await fetchApi("skills");
-  var skillsData = [];
-  try {
-    skillsData = await skillsRes.json();
-  } catch (e) {
-    console.log(e);
-  }
-
-  return {
-    props: {
-      bioData,
-      skillsData,
-    },
-  };
 }
