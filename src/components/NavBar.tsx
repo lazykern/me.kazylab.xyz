@@ -13,8 +13,7 @@ import { DarkMode, LightMode } from "@mui/icons-material";
 import { useTheme } from "next-themes";
 import { Button } from "@mui/material";
 import { Stack } from "@mui/system";
-
-const pages = ["links", "blog", "webring"];
+import { pageData } from "../data";
 
 function NavBar() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -104,9 +103,13 @@ function NavBar() {
             phusitsom
           </Typography>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button key={page} sx={{ marginTop: "5px" }}>
-                {page}
+            {pageData.map((page) => (
+              <Button
+                key={page.title}
+                href={page.href}
+                sx={{ marginTop: "5px" }}
+              >
+                {page.title}
               </Button>
             ))}
           </Box>
@@ -157,23 +160,17 @@ function NavBar() {
               }}
             >
               <Stack spacing={2}>
-                {pages.map((page) => (
+                {pageData.map((page) => (
                   <Button
-                    key={page}
+                    key={page.title}
+                    href={page.href}
                     sx={{
                       color: "var(--foreground)",
                       fontWeight: 700,
                       fontSize: "1.5rem",
                     }}
                   >
-                    <Typography
-                      sx={{
-                        textDecoration:
-                          page === "webring" ? "line-through" : "none",
-                      }}
-                    >
-                      {page}
-                    </Typography>
+                    <Typography>{page.title}</Typography>
                   </Button>
                 ))}
               </Stack>

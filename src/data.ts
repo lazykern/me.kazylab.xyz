@@ -46,3 +46,25 @@ export const skillsData: SkillsData = [
     ],
   },
 ];
+
+export type Page = {
+  title: string;
+  href: string;
+};
+
+export type PageData = Page[];
+
+export const pageData: PageData = [
+  {
+    title: "blog",
+    href: "/blog",
+  },
+  {
+    title: "links",
+    href: "https://linktr.ee/phusitsom",
+  },
+  {
+    title: "projects",
+    href: "/projects",
+  },
+];
