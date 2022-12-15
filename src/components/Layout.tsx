@@ -7,7 +7,7 @@ import { Box } from "@mui/system";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-import { lightTheme, darkTheme } from "../config/theme";
+import { lightTheme, darkTheme } from "../lib/theme";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { theme, systemTheme } = useTheme();

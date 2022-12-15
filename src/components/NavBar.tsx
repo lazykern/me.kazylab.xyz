@@ -13,7 +13,7 @@ import { DarkMode, LightMode } from "@mui/icons-material";
 import { useTheme } from "next-themes";
 import { Button } from "@mui/material";
 import { Stack } from "@mui/system";
-import { pageData } from "../data";
+import { pageData } from "../lib/data";
 
 function NavBar() {
   const { systemTheme, theme, setTheme } = useTheme();
