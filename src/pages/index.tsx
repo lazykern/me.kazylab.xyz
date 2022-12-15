@@ -24,7 +24,7 @@ export default function Home() {
               variant="h1"
               fontWeight="400"
               color="primary"
-              fontSize={{ xs: "2.5rem", md: "3.5rem" }}
+              fontSize={{ xs: "2.5rem", md: "4.5rem" }}
               overflow="auto"
             >
               Phusit Somboonyingsuk
