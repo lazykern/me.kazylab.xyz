@@ -96,10 +96,20 @@ export default function Home({
 
 export async function getStaticProps() {
   const bioRes = await fetchApi("bio");
-  const bioData = await bioRes.json();
+  var bioData = [];
+  try {
+    bioData = await bioRes.json();
+  } catch (e) {
+    console.log(e);
+  }
 
   const skillsRes = await fetchApi("skills");
-  const skillsData = await skillsRes.json();
+  var skillsData = [];
+  try {
+    skillsData = await skillsRes.json();
+  } catch (e) {
+    console.log(e);
+  }
 
   return {
     props: {
