@@ -3,6 +3,18 @@ import { TypographyOptions } from "@mui/material/styles/createTypography";
 
 const typography: TypographyOptions = {
   fontFamily: ["Ubuntu", "sans-serif"].join(","),
+  h1: {
+    fontSize: "3.5rem",
+    fontWeight: 400,
+  },
+  h2: {
+    fontSize: "3rem",
+    fontWeight: 400,
+  },
+  h3: {
+    fontSize: "2rem",
+    fontWeight: 400,
+  },
   body1: {
     fontSize: "1.2rem",
   },
