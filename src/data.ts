@@ -12,7 +12,7 @@ export const bioData: BioData = [
   },
   {
     key: "bio-2",
-    text: "Interested in Data Engineering and Software Engineering. Loves to automate stuffs.",
+    text: "Loves to automate stuffs. Interested in Data Engineering and Software Engineering.",
   },
   {
     key: "bio-3",
