@@ -119,6 +119,7 @@ export default function Home() {
               <Stack
                 sx={{
                   textAlign: "left",
+                  alignSelf: "center",
                 }}
               >
                 <Typography
