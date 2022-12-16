@@ -6,6 +6,7 @@
   --text: #000000;
   --text-secondary: #000000;
   --text-disabled: #757575;
+  --theme-change-transition: background 0.4s ease-in-out;
 }
 
 [data-theme="dark"] {
@@ -20,11 +21,15 @@
 
 html,
 body {
+  font-family: Ubuntu, sans-serif;
+}
+
+body {
   padding: 0;
   margin: 0;
-  font-family: Ubuntu, sans-serif;
   color: var(--foreground);
   background: var(--background);
+  transition: var(--theme-change-transition);
 }
 
 a {

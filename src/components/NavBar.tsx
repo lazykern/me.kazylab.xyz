@@ -67,6 +67,7 @@ function NavBar() {
         color: "var(--foreground)",
         background: "var(--background)",
         zIndex: 1400,
+        transition: "var(--theme-change-transition)",
       }}
     >
       <Container maxWidth="xl">
@@ -144,6 +145,8 @@ function NavBar() {
                 style: {
                   background: currentTheme === "dark" ? "#000" : "#fff",
                   opacity: 0.85,
+                  transition:
+                    "var(--theme-change-transition), opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
                 },
               },
             }}
