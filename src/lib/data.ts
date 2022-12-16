@@ -41,6 +41,7 @@ export const skillsData: SkillsData = [
       "C",
       "C++",
       "Java",
+      "Dart",
       "SQL",
       "HTML/CSS",
     ],
