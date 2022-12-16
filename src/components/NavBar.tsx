@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useRouter } from "next/router";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,6 +18,8 @@ import { Stack } from "@mui/system";
 import { pageData } from "../lib/data";
 
 function NavBar() {
+  const router = useRouter();
+
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -109,6 +113,7 @@ function NavBar() {
               <Button
                 key={page.title}
                 href={page.href}
+                disabled={router.pathname === page.href}
                 sx={{ marginTop: "5px" }}
               >
                 {page.title}
@@ -168,6 +173,7 @@ function NavBar() {
                   <Button
                     key={page.title}
                     href={page.href}
+                    disabled={router.pathname === page.href}
                     sx={{
                       color: "var(--foreground)",
                       fontWeight: 700,

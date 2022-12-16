@@ -56,6 +56,10 @@ export type PageData = Page[];
 
 export const pageData: PageData = [
   {
+    title: "about",
+    href: "/",
+  },
+  {
     title: "blog",
     href: "/blog",
   },
