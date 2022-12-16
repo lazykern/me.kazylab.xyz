@@ -21,7 +21,7 @@ export async function getPublishedBlogData() {
   const res = await notion.databases.query({
     database_id: databaseId,
     filter: {
-      property: "published",
+      property: "Published",
       checkbox: {
         equals: true,
       },
