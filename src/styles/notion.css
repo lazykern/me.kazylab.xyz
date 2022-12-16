@@ -823,6 +823,10 @@ svg.notion-page-icon {
   background: rgb(247, 246, 245);
 }
 
+.twitter-tweet iframe {
+  border-radius: 12px;
+}
+
 .notion-text {
   width: 100%;
   white-space: pre-wrap;

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 import { notionX, getPublishedBlogData } from "../../lib/notion";
 import { getBlockTitle } from "notion-utils";
@@ -6,9 +7,10 @@ import { ExtendedRecordMap } from "notion-types";
 
 import { NotionRenderer } from "react-notion-x";
 import Code from "../../components/Notion/Code";
-import TweetEmbed from "react-tweet-embed";
+import Tweet from "../../components/Notion/Tweet";
 import { Collection } from "react-notion-x/build/third-party/collection";
 import { Equation } from "react-notion-x/build/third-party/equation";
+import { server } from "../../lib/config";
 
 export async function getStaticProps(context: any) {
   const recordMap = await notionX.getPage(context.params.id);
@@ -46,15 +48,13 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
   if (keys.length && block) {
     title = getBlockTitle(block, recordMap) || "Blog";
   }
-  const Tweet = ({ id }: { id: string }) => {
-    return <TweetEmbed tweetId={id} options={{ theme: "dark" }} />;
-  };
   return (
     <div>
       <Head>
         <title>{title}</title>
         <meta name="description" content="Blog" />
       </Head>
+      <Script src={server + "/scripts/notion-embed-styles.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
