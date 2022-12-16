@@ -46,11 +46,9 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
   if (keys.length && block) {
     title = getBlockTitle(block, recordMap) || "Blog";
   }
-
   const Tweet = ({ id }: { id: string }) => {
     return <TweetEmbed tweetId={id} options={{ theme: "dark" }} />;
   };
-
   return (
     <div>
       <Head>
