@@ -77,7 +77,8 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <IconButton
-            href={(router.pathname === "/" && undefined) || "/"}
+            href="/"
+            disabled={router.pathname === "/"}
             disableRipple
             disableFocusRipple
             disableTouchRipple
