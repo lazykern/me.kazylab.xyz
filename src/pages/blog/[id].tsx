@@ -1,16 +1,17 @@
-import notion from "../../lib/notion";
-import Code from "../../components/Notion/Code";
-import { Collection } from "react-notion-x/build/third-party/collection";
-import { NotionRenderer } from "react-notion-x";
-import { ExtendedRecordMap } from "notion-types";
-import { dev } from "../../lib/config";
 import Head from "next/head";
 
+import { notionX, getPublishedBlogData } from "../../lib/notion";
 import { getBlockTitle } from "notion-utils";
+import { ExtendedRecordMap } from "notion-types";
+
+import { NotionRenderer } from "react-notion-x";
+import Code from "../../components/Notion/Code";
+import Tweet from "../../components/Notion/Tweet";
+import { Collection } from "react-notion-x/build/third-party/collection";
+import { Equation } from "react-notion-x/build/third-party/equation";
 
 export async function getStaticProps(context: any) {
-  const recordMap = await notion.getPage(context.params.id);
-
+  const recordMap = await notionX.getPage(context.params.id);
   return {
     props: {
       recordMap,
@@ -19,28 +20,24 @@ export async function getStaticProps(context: any) {
 }
 
 export async function getStaticPaths() {
-  if (dev) {
+  const blogData = await getPublishedBlogData();
+  const paths = blogData.map((blog) => {
     return {
-      paths: [],
-      fallback: true,
+      params: {
+        id: blog.id,
+      },
     };
-  }
+  });
+
+  console.log("blog static paths", paths);
 
   return {
-    paths: [
-      {
-        params: {
-          id: "38a4a273da374dc987d3e415f9bb5e83",
-        },
-      },
-    ],
+    paths,
     fallback: true,
   };
 }
 
 export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
-  console.log(recordMap);
-
   const keys = Object.keys(recordMap?.block || {});
   const block = recordMap?.block?.[keys[0]]?.value;
 
@@ -49,7 +46,6 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
   if (keys.length && block) {
     title = getBlockTitle(block, recordMap) || "Blog";
   }
-
   return (
     <div>
       <Head>
@@ -62,8 +58,14 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
         components={{
           Code,
           Collection,
+          Equation,
+          Tweet,
+        }}
+        mapPageUrl={(pageId) => {
+          return `/blog/${pageId}`;
         }}
         disableHeader
+        previewImages={true}
       />
     </div>
   );

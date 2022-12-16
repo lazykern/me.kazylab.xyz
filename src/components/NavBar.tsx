@@ -54,7 +54,7 @@ function NavBar() {
   };
 
   const [modalOpen, setModalOpen] = React.useState(false);
-  const handleModalOpen = () => setModalOpen(true);
+  const handleModalToggle = () => setModalOpen(!modalOpen);
   const handleModalClose = () => setModalOpen(false);
 
   return (
@@ -66,6 +66,7 @@ function NavBar() {
         bottom: { xs: 0, md: "auto" },
         color: "var(--foreground)",
         background: "var(--background)",
+        zIndex: 1400,
       }}
     >
       <Container maxWidth="xl">
@@ -124,7 +125,7 @@ function NavBar() {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleModalOpen}
+              onClick={handleModalToggle}
               disableRipple
               disableFocusRipple
               disableTouchRipple
