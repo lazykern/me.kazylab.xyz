@@ -7,7 +7,7 @@ const embedStyles = [
   },
 ];
 
-const apply = () => {
+setInterval(() => {
   Array.prototype.slice
     .call(document.getElementsByTagName("iframe"))
     .forEach((iframe) => {
@@ -17,7 +17,4 @@ const apply = () => {
         }
       });
     });
-};
-apply();
-
-setInterval(apply, 3000);
+}, 3000);

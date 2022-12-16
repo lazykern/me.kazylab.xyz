@@ -7,15 +7,12 @@ const embedStyles = [
   },
 ];
 
-const apply = () => {
-  Array.prototype.slice
-    .call(document.getElementsByTagName("iframe"))
-    .forEach((iframe) => {
-      embedStyles.forEach((embedStyle) => {
-        if (iframe.src.startsWith(embedStyle.src)) {
-          Object.assign(iframe.style, embedStyle.style);
-        }
-      });
+Array.prototype.slice
+  .call(document.getElementsByTagName("iframe"))
+  .forEach((iframe) => {
+    embedStyles.forEach((embedStyle) => {
+      if (iframe.src.startsWith(embedStyle.src)) {
+        Object.assign(iframe.style, embedStyle.style);
+      }
     });
-};
-apply();
+  });

@@ -57,15 +57,19 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
   if (keys.length && block) {
     title = getBlockTitle(block, recordMap) || "Blog";
   }
+
+  const embedStyleScriptSrc =
+    server + dev
+      ? "/scripts/notion-embed-styles.js"
+      : "/scripts/dev-notion-embed-styles.js";
+
   return (
     <div>
       <Head>
         <title>{title}</title>
         <meta name="description" content="Blog" />
       </Head>
-      <Script
-        src={server + "/scripts/" + (dev && "dev-") + "notion-embed-styles.js"}
-      ></Script>
+      <Script src={embedStyleScriptSrc}></Script>
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
