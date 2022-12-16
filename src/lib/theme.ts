@@ -34,6 +34,10 @@ export const lightTheme = createTheme({
       secondary: "#000000",
       disabled: "#303030",
     },
+    action: {
+      disabled: "#303030",
+      disabledOpacity: 1,
+    },
   },
   typography,
 });
@@ -55,6 +59,10 @@ export const darkTheme = createTheme({
       primary: "#ffffff",
       secondary: "#ffffff",
       disabled: "#303030",
+    },
+    action: {
+      disabled: "#303030",
+      disabledOpacity: 1,
     },
   },
   typography,
