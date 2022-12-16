@@ -1,6 +1,5 @@
 import notion from "../../lib/notion";
 import Code from "../../components/Notion/Code";
-import { Collection } from "react-notion-x/build/third-party/collection";
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
 import { dev } from "../../lib/config";
@@ -61,9 +60,9 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
         fullPage={true}
         components={{
           Code,
-          Collection,
         }}
         disableHeader
+        previewImages={true}
       />
     </div>
   );

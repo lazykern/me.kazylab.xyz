@@ -249,7 +249,7 @@
 }
 
 .medium-zoom-overlay {
-  z-index: 300;
+  z-index: 1400;
 }
 
 .medium-zoom-image {
@@ -260,7 +260,7 @@
   margin: unset !important;
   min-width: unset !important;
   min-height: unset !important;
-  z-index: 301;
+  z-index: 1500;
 }
 
 .notion-frame {
