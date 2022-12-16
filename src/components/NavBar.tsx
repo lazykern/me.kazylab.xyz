@@ -77,7 +77,7 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <IconButton
-            href="/"
+            href={(router.pathname === "/" && undefined) || "/"}
             disableRipple
             disableFocusRipple
             disableTouchRipple
@@ -96,7 +96,7 @@ function NavBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href={router.pathname === "/" ? undefined : "/"}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
