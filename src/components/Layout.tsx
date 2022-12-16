@@ -11,7 +11,6 @@ import { lightTheme, darkTheme } from "../lib/theme";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { theme, systemTheme } = useTheme();
-
   const currentTheme = theme === "system" ? systemTheme : theme;
   const muiTheme = currentTheme === "dark" ? darkTheme : lightTheme;
 

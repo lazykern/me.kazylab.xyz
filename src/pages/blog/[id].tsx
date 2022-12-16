@@ -6,7 +6,7 @@ import { ExtendedRecordMap } from "notion-types";
 
 import { NotionRenderer } from "react-notion-x";
 import Code from "../../components/Notion/Code";
-import Tweet from "../../components/Notion/Tweet";
+import TweetEmbed from "react-tweet-embed";
 import { Collection } from "react-notion-x/build/third-party/collection";
 import { Equation } from "react-notion-x/build/third-party/equation";
 
@@ -46,6 +46,9 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
   if (keys.length && block) {
     title = getBlockTitle(block, recordMap) || "Blog";
   }
+  const Tweet = ({ id }: { id: string }) => {
+    return <TweetEmbed tweetId={id} options={{ theme: "dark" }} />;
+  };
   return (
     <div>
       <Head>
