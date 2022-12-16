@@ -19,3 +19,5 @@ const apply = () => {
     });
 };
 apply();
+
+setInterval(apply, 3000);

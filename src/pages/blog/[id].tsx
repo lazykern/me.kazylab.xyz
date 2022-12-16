@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Script from "next/script";
 
+import { dev } from "../../lib/config";
+
 import { notionX, getPublishedBlogData } from "../../lib/notion";
 import { getBlockTitle } from "notion-utils";
 import { ExtendedRecordMap } from "notion-types";
@@ -22,6 +24,13 @@ export async function getStaticProps(context: any) {
 }
 
 export async function getStaticPaths() {
+  if (dev) {
+    return {
+      paths: [],
+      fallback: true,
+    };
+  }
+
   const blogData = await getPublishedBlogData();
   const paths = blogData.map((blog) => {
     return {
@@ -54,7 +63,9 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
         <title>{title}</title>
         <meta name="description" content="Blog" />
       </Head>
-      <Script src={server + "/scripts/notion-embed-styles.js"}></Script>
+      <Script
+        src={server + "/scripts/" + (dev && "dev-") + "notion-embed-styles.js"}
+      ></Script>
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
