@@ -10,7 +10,6 @@ export default function Footer() {
         height: "50px",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "var(--background)",
       }}
     >
       <Typography
