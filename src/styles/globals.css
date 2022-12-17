@@ -3,8 +3,8 @@
   --foreground: #0f1419;
   --primary: #3b57bb;
   --secondary: #de4c7e;
-  --text: #000000;
-  --text-secondary: #000000;
+  --text: #0f1419;
+  --text-secondary: #0f1419;
   --text-disabled: #757575;
   --theme-change-transition: background 0.4s ease-in-out;
 }
@@ -14,8 +14,8 @@
   --foreground: #d6d9db;
   --primary: #3b57bb;
   --secondary: #de4c7e;
-  --text: #fff;
-  --text-secondary: #fff;
+  --text: #d6d9db;
+  --text-secondary: #d6d9db;
   --text-disabled: #949494;
 }
 

@@ -113,9 +113,14 @@ function NavBar() {
             {pageData.map((page) => (
               <Button
                 key={page.title}
-                href={page.href}
-                disabled={router.pathname === page.href}
-                sx={{ marginTop: "5px" }}
+                href={router.pathname === page.href ? undefined : page.href}
+                sx={{
+                  marginTop: "5px",
+                  color:
+                    router.pathname === page.href
+                      ? "var(--text-disabled)"
+                      : "var(--primary)",
+                }}
               >
                 {page.title}
               </Button>
@@ -173,12 +178,14 @@ function NavBar() {
                 {pageData.map((page) => (
                   <Button
                     key={page.title}
-                    href={page.href}
-                    disabled={router.pathname === page.href}
+                    href={router.pathname === page.href ? undefined : page.href}
                     sx={{
-                      color: "var(--foreground)",
                       fontWeight: 700,
                       fontSize: "1.5rem",
+                      color:
+                        router.pathname === page.href
+                          ? "var(--text-disabled)"
+                          : "var(--primary)",
                     }}
                   >
                     <Typography>{page.title}</Typography>
