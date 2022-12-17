@@ -26,4 +26,4 @@ const apply = () => {
 
 apply();
 
-setTimeout(apply, 2000);
+setInterval(apply, 3000);
