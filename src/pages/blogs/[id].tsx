@@ -1,15 +1,8 @@
-import Head from "next/head";
 import Script from "next/script";
 
 import { dev } from "../../lib/config";
 
-import {
-  notionX,
-  getProperty,
-  getPublishedBlogs,
-  notion,
-} from "../../lib/notion";
-import { getBlockTitle } from "notion-utils";
+import { notionX, getPublishedBlogs, notion } from "../../lib/notion";
 import { ExtendedRecordMap } from "notion-types";
 
 import { NotionRenderer } from "react-notion-x";
@@ -83,7 +76,7 @@ export default function Blog({
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: `https://phusitsom.me/blog/${pageId}`,
+          url: `https://phusitsom.me/blogs/${pageId}`,
           siteName: `phusitsom - ${title}`,
           images: [
             {
@@ -113,7 +106,7 @@ export default function Blog({
           Tweet,
         }}
         mapPageUrl={(pageId) => {
-          return `/blog/${pageId}`;
+          return `/blogs/${pageId}`;
         }}
         disableHeader
         previewImages={true}

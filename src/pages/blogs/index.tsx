@@ -2,12 +2,11 @@ import { getPublishedBlogs, notionX } from "../../lib/notion";
 import { Collection } from "react-notion-x/build/third-party/collection";
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
-import Head from "next/head";
-import { IconButton, Input, Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import Script from "next/script";
 import { server } from "../../lib/config";
 import { BlogObjectResponse } from "../../lib/notion/types";
-import { Box, Container, Stack } from "@mui/system";
+import { Box } from "@mui/system";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import { Close } from "@mui/icons-material";
@@ -43,7 +42,7 @@ export default function Blog({
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: "https://phusitsom.me/blog",
+          url: "https://phusitsom.me/blogs",
           siteName: "phusitsom - Blogs",
           images: [
             {
@@ -107,7 +106,7 @@ export default function Blog({
           Collection,
         }}
         mapPageUrl={(pageId) => {
-          return `/blog/${pageId}`;
+          return `/blogs/${pageId}`;
         }}
         disableHeader
         previewImages={true}
