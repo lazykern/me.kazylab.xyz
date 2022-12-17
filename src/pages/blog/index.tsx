@@ -4,6 +4,8 @@ import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
 import Head from "next/head";
 import { Typography } from "@mui/material";
+import Script from "next/script";
+import { server } from "../../lib/config";
 
 export async function getStaticProps() {
   const recordMap = await notionX.getPage("d595daab1b044ed795bd66d41b445fc9");
@@ -22,6 +24,7 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
         <title>Blog</title>
         <meta name="description" content="Blog" />
       </Head>
+      <Script src={server + "/scripts/notion.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}
         pageTitle={

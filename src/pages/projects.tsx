@@ -30,7 +30,7 @@ export default function Projects({
         <title>Projects</title>
         <meta name="description" content="Projects" />
       </Head>
-      <Script src={server + "/scripts/notion-invert-on-theme.js"}></Script>
+      <Script src={server + "/scripts/notion.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}
         pageTitle={
