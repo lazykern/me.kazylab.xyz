@@ -1,4 +1,4 @@
-const apply = () => {
+const applyFun = () => {
   Array.prototype.forEach.call(
     document.getElementsByClassName("medium-zoom-image"),
     function(element) {
@@ -15,4 +15,4 @@ const apply = () => {
   );
 };
 
-setTimeout(apply, 2000);
+setTimeout(applyFun, 2000);

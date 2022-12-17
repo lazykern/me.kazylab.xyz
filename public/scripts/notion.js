@@ -6,7 +6,7 @@ const embedStyles = [
     },
   },
 ];
-const apply = () => {
+const applyNotion = () => {
   Array.prototype.slice
     .call(document.getElementsByTagName("iframe"))
     .forEach((iframe) => {
@@ -24,6 +24,6 @@ const apply = () => {
   });
 };
 
-apply();
+applyNotion();
 
-setInterval(apply, 3000);
+setInterval(applyNotion, 3000);
