@@ -5,6 +5,8 @@ import { notionX } from "../lib/notion";
 import Code from "../components/Notion/Code";
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
+import Script from "next/script";
+import { server } from "../lib/config";
 
 export async function getStaticProps() {
   const recordMap = await notionX.getPage("e0f8fad8b58541f3a20af3f7f703f0f5");
@@ -28,6 +30,7 @@ export default function Projects({
         <title>Projects</title>
         <meta name="description" content="Projects" />
       </Head>
+      <Script src={server + "/scripts/notion-invert-on-theme.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}
         pageTitle={
