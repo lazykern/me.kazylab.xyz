@@ -12,6 +12,7 @@ export async function getStaticProps() {
     props: {
       recordMap,
     },
+    revalidate: 60,
   };
 }
 export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {

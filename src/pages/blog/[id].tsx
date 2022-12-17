@@ -20,6 +20,7 @@ export async function getStaticProps(context: any) {
     props: {
       recordMap,
     },
+    revalidate: 60,
   };
 }
 
@@ -27,7 +28,7 @@ export async function getStaticPaths() {
   if (dev) {
     return {
       paths: [],
-      fallback: true,
+      fallback: false,
     };
   }
 
