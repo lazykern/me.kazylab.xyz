@@ -3,7 +3,12 @@ import Script from "next/script";
 
 import { dev } from "../../lib/config";
 
-import { notionX, getPublishedBlogs } from "../../lib/notion";
+import {
+  notionX,
+  getProperty,
+  getPublishedBlogs,
+  notion,
+} from "../../lib/notion";
 import { getBlockTitle } from "notion-utils";
 import { ExtendedRecordMap } from "notion-types";
 
@@ -13,12 +18,20 @@ import Tweet from "../../components/Notion/Tweet";
 import { Collection } from "react-notion-x/build/third-party/collection";
 import { Equation } from "react-notion-x/build/third-party/equation";
 import { server } from "../../lib/config";
+import { NextSeo } from "next-seo";
+import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { Cover, Description, Name } from "../../lib/notion/types";
 
 export async function getStaticProps(context: any) {
   const recordMap = await notionX.getPage(context.params.id);
+  const pageObject = await notion.pages.retrieve({
+    page_id: context.params.id,
+  });
+
   return {
     props: {
       recordMap,
+      pageObject,
     },
     revalidate: 60,
   };
@@ -49,21 +62,46 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
-  const keys = Object.keys(recordMap?.block || {});
-  const block = recordMap?.block?.[keys[0]]?.value;
+export default function Blog({
+  recordMap,
+  pageObject,
+}: {
+  recordMap: ExtendedRecordMap;
+  pageObject: PageObjectResponse;
+}) {
+  const pageId = pageObject.id;
+  const title = (pageObject.properties.Name as Name).title[0].plain_text;
+  const description = (pageObject.properties.Description as Description)
+    .rich_text[0]?.plain_text;
+  const coverImage = (pageObject.cover as Cover)?.external?.url;
 
-  var title = "Loading Blog";
-
-  if (keys.length && block) {
-    title = getBlockTitle(block, recordMap) || "Blog";
-  }
   return (
-    <div>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="Blog" />
-      </Head>
+    <>
+      <NextSeo
+        title={"phusitsom | Blog - " + title}
+        description={description ?? "A blog written by phusitsom"}
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          url: `https://phusitsom.me/blog/${pageId}`,
+          siteName: `phusitsom - ${title}`,
+          images: [
+            {
+              url: coverImage,
+              width: 1200,
+              height: 630,
+              alt: `phusitsom.me - ${title}`,
+              type: "image/png",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <Script src={server + "/scripts/notion.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}
@@ -80,6 +118,6 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
         disableHeader
         previewImages={true}
       />
-    </div>
+    </>
   );
 }

@@ -29,3 +29,11 @@ export async function getPublishedBlogs() {
   });
   return res.results;
 }
+
+export async function getProperty(pageId: string, propertyName: string) {
+  const res = await notion.pages.properties.retrieve({
+    page_id: pageId,
+    property_id: propertyName,
+  });
+  return (res as any).results;
+}
