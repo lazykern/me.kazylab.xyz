@@ -16,6 +16,7 @@ import { useTheme } from "next-themes";
 import { Button } from "@mui/material";
 import { Stack } from "@mui/system";
 import { pageData } from "../lib/data";
+import Link from "next/link";
 
 function NavBar() {
   const router = useRouter();
@@ -76,38 +77,39 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <IconButton
-            href="/"
-            disabled={router.pathname === "/"}
-            disableRipple
-            disableFocusRipple
-            disableTouchRipple
-          >
-            <Avatar
-              sx={{
-                mr: 2,
-                borderRadius: 0,
-              }}
-              alt="phusitsom"
-              className="invert-on-theme"
-              src="/images/icon.png"
-            />
-          </IconButton>
+          <Link href="/">
+            <IconButton
+              disabled={router.pathname === "/"}
+              disableRipple
+              disableFocusRipple
+              disableTouchRipple
+            >
+              <Avatar
+                sx={{
+                  mr: 2,
+                  borderRadius: 0,
+                }}
+                alt="phusitsom"
+                className="invert-on-theme"
+                src="/images/icon.png"
+              />
+            </IconButton>
+          </Link>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pageData.map((page) => (
-              <Button
-                key={page.title}
-                href={router.pathname === page.href ? undefined : page.href}
-                sx={{
-                  marginTop: "5px",
-                  color:
-                    router.pathname === page.href
-                      ? "var(--text-disabled)"
-                      : "var(--primary)",
-                }}
-              >
-                {page.title}
-              </Button>
+              <Link key={page.title} href={page.href}>
+                <Button
+                  sx={{
+                    marginTop: "5px",
+                    color:
+                      router.pathname === page.href
+                        ? "var(--text-disabled)"
+                        : "var(--primary)",
+                  }}
+                >
+                  {page.title}
+                </Button>
+              </Link>
             ))}
           </Box>
 
@@ -160,20 +162,25 @@ function NavBar() {
             >
               <Stack spacing={2}>
                 {pageData.map((page) => (
-                  <Button
-                    key={page.title}
-                    href={router.pathname === page.href ? undefined : page.href}
-                    sx={{
-                      fontWeight: 700,
-                      fontSize: "1.5rem",
-                      color:
+                  <Link key={page.title} href={page.href}>
+                    <Button
+                      sx={{
+                        fontWeight: 700,
+                        fontSize: "1.5rem",
+                        color:
+                          router.pathname === page.href
+                            ? "var(--text-disabled)"
+                            : "var(--primary)",
+                      }}
+                      onClick={
                         router.pathname === page.href
-                          ? "var(--text-disabled)"
-                          : "var(--primary)",
-                    }}
-                  >
-                    <Typography>{page.title}</Typography>
-                  </Button>
+                          ? () => { }
+                          : handleModalClose
+                      }
+                    >
+                      <Typography>{page.title}</Typography>
+                    </Button>
+                  </Link>
                 ))}
               </Stack>
             </Box>
