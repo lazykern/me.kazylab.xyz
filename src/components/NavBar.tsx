@@ -172,11 +172,7 @@ function NavBar() {
                             ? "var(--text-disabled)"
                             : "var(--primary)",
                       }}
-                      onClick={
-                        router.pathname === page.href
-                          ? () => { }
-                          : handleModalClose
-                      }
+                      onClick={handleModalClose}
                     >
                       <Typography>{page.title}</Typography>
                     </Button>
