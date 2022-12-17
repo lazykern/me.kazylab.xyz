@@ -24,6 +24,7 @@
     "katex": "^0.16.4",
     "next": "13.0.6",
     "next-themes": "^0.2.1",
+    "nextjs-progressbar": "^0.0.16",
     "notion-client": "^6.15.6",
     "notion-types": "^6.15.6",
     "notion-utils": "^6.15.6",
@@ -31,11 +32,13 @@
     "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-highlight-words": "^0.18.0",
     "react-notion-x": "^6.15.7",
     "react-tweet-embed": "^2.0.0",
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@types/prismjs": "^1.26.0"
+    "@types/prismjs": "^1.26.0",
+    "@types/react-highlight-words": "^0.16.4"
   }
 }

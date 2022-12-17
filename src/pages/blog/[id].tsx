@@ -3,7 +3,7 @@ import Script from "next/script";
 
 import { dev } from "../../lib/config";
 
-import { notionX, getPublishedBlogData } from "../../lib/notion";
+import { notionX, getPublishedBlogs } from "../../lib/notion";
 import { getBlockTitle } from "notion-utils";
 import { ExtendedRecordMap } from "notion-types";
 
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
     };
   }
 
-  const blogData = await getPublishedBlogData();
+  const blogData = await getPublishedBlogs();
   const paths = blogData.map((blog) => {
     return {
       params: {

@@ -93,22 +93,6 @@ function NavBar() {
               src="/images/icon.png"
             />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href={router.pathname === "/" ? undefined : "/"}
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              letterSpacing: ".2rem",
-              textDecoration: "none",
-              color: "var(--foreground)",
-            }}
-          >
-            phusitsom
-          </Typography>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pageData.map((page) => (
               <Button

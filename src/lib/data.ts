@@ -61,15 +61,15 @@ export const pageData: PageData = [
     href: "/",
   },
   {
-    title: "blog",
+    title: "blogs",
     href: "/blog",
-  },
-  {
-    title: "links",
-    href: "https://linktr.ee/phusitsom",
   },
   {
     title: "projects",
     href: "/projects",
+  },
+  {
+    title: "links",
+    href: "https://linktr.ee/phusitsom",
   },
 ];
