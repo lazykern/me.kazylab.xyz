@@ -35,8 +35,7 @@ export const lightTheme = createTheme({
       disabled: "#303030",
     },
     action: {
-      disabled: "#303030",
-      disabledOpacity: 1,
+      disabledOpacity: 0.7,
     },
   },
   typography,
@@ -61,8 +60,7 @@ export const darkTheme = createTheme({
       disabled: "#303030",
     },
     action: {
-      disabled: "#303030",
-      disabledOpacity: 1,
+      disabledOpacity: 0.7,
     },
   },
   typography,
