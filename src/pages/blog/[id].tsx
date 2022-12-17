@@ -60,9 +60,8 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
 
   const embedStyleScriptSrc =
     server + dev
-      ? "/scripts/notion-embed-styles.js"
-      : "/scripts/dev-notion-embed-styles.js";
-
+      ? "/scripts/dev-notion-embed-styles.js"
+      : "/scripts/notion-embed-styles.js";
   return (
     <div>
       <Head>
