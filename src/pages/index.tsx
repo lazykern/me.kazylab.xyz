@@ -1,16 +1,36 @@
 import { ChevronRight } from "@mui/icons-material";
 import { Container, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { skillsData, bioData } from "../lib/data";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>phusitsom</title>
-        <meta name="description" content="Homepage" />
-      </Head>
+      <NextSeo
+        title="phusitsom"
+        description="phusitsom's personal website. showcase of phusitsom's projects, blogs, and more."
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          url: "https://phusitsom.me",
+          siteName: "phusitsom",
+          images: [
+            {
+              url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1671301788/phusitsom.me/og-image-default_ycdt9p.png",
+              width: 1200,
+              height: 630,
+              alt: "phusitsom.me",
+              type: "image/png",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <Container
         sx={{
           justifyContent: "center",

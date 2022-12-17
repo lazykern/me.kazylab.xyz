@@ -12,6 +12,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import { Close } from "@mui/icons-material";
 import BlogSearcher from "../../components/Notion/BlogSearcher";
+import { NextSeo } from "next-seo";
 
 export async function getStaticProps() {
   const recordMap = await notionX.getPage("d595daab1b044ed795bd66d41b445fc9");
@@ -36,10 +37,30 @@ export default function Blog({
 
   return (
     <>
-      <Head>
-        <title>Blog</title>
-        <meta name="description" content="Blog" />
-      </Head>
+      <NextSeo
+        title="phusitsom | Blogs"
+        description="phusitsom's blogs. a collection of blogs that phusitsom have written."
+        openGraph={{
+          type: "website",
+          locale: "en_US",
+          url: "https://phusitsom.me/blog",
+          siteName: "phusitsom - Blogs",
+          images: [
+            {
+              url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1671302036/phusitsom.me/og-image-blogs_lfjqfv.png",
+              width: 1200,
+              height: 630,
+              alt: "phusitsom.me - Blogs",
+              type: "image/png",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <Script src={server + "/scripts/notion.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}

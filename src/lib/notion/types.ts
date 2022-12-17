@@ -81,7 +81,31 @@ export interface Name {
   title: Title[];
 }
 
+export interface Description {
+  id: string;
+  type: string;
+  rich_text: RichText[];
+}
+
+export interface Annotations {
+  bold: boolean;
+  italic: boolean;
+  strikethrough: boolean;
+  underline: boolean;
+  code: boolean;
+  color: string;
+}
+
+export interface RichText {
+  type: string;
+  text: Text;
+  annotations: Annotations;
+  plain_text: string;
+  href?: any;
+}
+
 export interface Properties {
+  Description: Description;
   Published: Published;
   Tags: Tags;
   Date: Date;
@@ -101,4 +125,18 @@ export interface BlogObjectResponse {
   archived: boolean;
   properties: Properties;
   url: string;
+}
+
+export interface DescriptionObjectResponse {
+  object: string;
+  type: string;
+  id: string;
+  rich_text: RichText;
+}
+
+export interface NameObjectResponse {
+  object: string;
+  type: string;
+  id: string;
+  title: Title;
 }
