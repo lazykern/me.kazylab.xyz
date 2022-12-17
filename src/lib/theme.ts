@@ -4,7 +4,7 @@ import { TypographyOptions } from "@mui/material/styles/createTypography";
 const typography: TypographyOptions = {
   fontFamily: ["Ubuntu", "sans-serif"].join(","),
   h1: {
-    fontSize: "4rem",
+    fontSize: "4.5rem",
     fontWeight: 400,
   },
   h2: {
