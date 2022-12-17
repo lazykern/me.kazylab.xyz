@@ -60,6 +60,7 @@ export const darkTheme = createTheme({
       disabled: "#303030",
     },
     action: {
+      disabled: "#303030",
       disabledOpacity: 0.7,
     },
   },
