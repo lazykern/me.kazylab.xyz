@@ -31,6 +31,7 @@ export default function Projects({
         <meta name="description" content="Projects" />
       </Head>
       <Script src={server + "/scripts/notion.js"}></Script>
+      <Script src={server + "/scripts/veryhardbit.js"}></Script>
       <NotionRenderer
         recordMap={recordMap}
         pageTitle={
