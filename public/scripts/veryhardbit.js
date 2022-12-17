@@ -15,4 +15,4 @@ const applyFun = () => {
   );
 };
 
-setTimeout(applyFun, 2000);
+setTimeout(applyFun, 1000);
