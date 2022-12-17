@@ -86,7 +86,7 @@ const BlogSearcher = ({
         tags.map((tag) => tag.name)
       ).map((blog) => {
         return (
-          <Link key={blog.id} href={`/blog/${blog.id}`}>
+          <Link key={blog.id} href={`/blogs/${blog.id}`}>
             <Card sx={{ display: "flex" }} className={"blog-card"}>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <CardContent sx={{ flex: "1 0 auto" }}>

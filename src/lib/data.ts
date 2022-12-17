@@ -62,7 +62,7 @@ export const pageData: PageData = [
   },
   {
     title: "blogs",
-    href: "/blog",
+    href: "/blogs",
   },
   {
     title: "projects",
