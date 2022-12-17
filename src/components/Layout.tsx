@@ -25,7 +25,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             sx={{
               marginTop: { xs: "0px", md: "64px" },
               marginBottom: { xs: "56px", md: "0px" },
-              maxWidth: "720px",
+              maxWidth: "1000px",
               marginX: "auto",
             }}
           >

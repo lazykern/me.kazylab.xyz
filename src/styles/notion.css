@@ -75,7 +75,7 @@
   --fg-color-0: var(--fg-color);
   --fg-color-1: var(--fg-color);
   --fg-color-2: var(--fg-color);
-  --fg-color-3: var(--fg-color);
+  --fg-color-3: rgb(161 161 161);
   --fg-color-4: var(--fg-color);
   --fg-color-5: rgba(255, 255, 255, 0.7);
   --fg-color-6: #fff;
@@ -1208,7 +1208,6 @@ svg.notion-page-icon {
 
 .notion-collection-view-type-title {
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   color: var(--fg-color);
 }
