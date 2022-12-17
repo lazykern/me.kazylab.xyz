@@ -6,20 +6,24 @@ const embedStyles = [
     },
   },
 ];
-
-Array.prototype.slice
-  .call(document.getElementsByTagName("iframe"))
-  .forEach((iframe) => {
-    embedStyles.forEach((embedStyle) => {
-      if (iframe.src.startsWith(embedStyle.src)) {
-        Object.assign(iframe.style, embedStyle.style);
-      }
+const apply = () => {
+  Array.prototype.slice
+    .call(document.getElementsByTagName("iframe"))
+    .forEach((iframe) => {
+      embedStyles.forEach((embedStyle) => {
+        if (iframe.src.startsWith(embedStyle.src)) {
+          Object.assign(iframe.style, embedStyle.style);
+        }
+      });
     });
+  var externals = document.getElementsByClassName("notion-external");
+  Array.prototype.forEach.call(externals, function(element) {
+    if (element.href.startsWith("https://github.com")) {
+      console.log(element.childNodes[0].classList.add("invert-on-theme"));
+    }
   });
+};
 
-var externals = document.getElementsByClassName("notion-external");
-Array.prototype.forEach.call(externals, function(element) {
-  if (element.href.startsWith("https://github.com")) {
-    console.log(element.childNodes[0].classList.add("invert-on-theme"));
-  }
-});
+apply();
+
+setTimeout(apply, 2000);
