@@ -3,6 +3,7 @@ import { Collection } from "react-notion-x/build/third-party/collection";
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
 import Head from "next/head";
+import { Typography } from "@mui/material";
 
 export async function getStaticProps() {
   const recordMap = await notionX.getPage("d595daab1b044ed795bd66d41b445fc9");
@@ -22,6 +23,17 @@ export default function Blog({ recordMap }: { recordMap: ExtendedRecordMap }) {
       </Head>
       <NotionRenderer
         recordMap={recordMap}
+        pageTitle={
+          <Typography
+            variant="h1"
+            fontWeight="400"
+            color="primary"
+            fontSize={{ xs: "2.5rem", md: "4.5rem" }}
+            overflow="auto"
+          >
+            Blog
+          </Typography>
+        }
         fullPage={true}
         components={{
           Collection,
