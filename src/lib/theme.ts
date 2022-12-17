@@ -1,11 +1,12 @@
-import { createTheme } from "@mui/material/styles";
+import { Components, createTheme, Theme } from "@mui/material/styles";
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 
 const typography: TypographyOptions = {
-  fontFamily: ["Ubuntu", "sans-serif"].join(","),
+  fontFamily: "var(--fonts)",
   h1: {
     fontSize: "4.5rem",
-    fontWeight: 400,
+    fontWeight: 500,
+    lineHeight: 1.5,
   },
   h2: {
     fontSize: "3rem",
@@ -17,6 +18,23 @@ const typography: TypographyOptions = {
   },
   body1: {
     fontSize: "1.2rem",
+  },
+};
+
+const components: Components<Omit<Theme, "components">> = {
+  MuiAppBar: {
+    styleOverrides: {
+      root: {
+        transition: "var(--theme-change-transition)",
+      },
+    },
+  },
+  MuiCard: {
+    styleOverrides: {
+      root: {
+        transition: "var(--theme-change-transition)",
+      },
+    },
   },
 };
 
@@ -36,6 +54,7 @@ export const lightTheme = createTheme({
     },
   },
   typography,
+  components,
 });
 
 export const darkTheme = createTheme({
@@ -49,7 +68,7 @@ export const darkTheme = createTheme({
     },
     background: {
       default: "#000000",
-      paper: "#181818",
+      paper: "#050505",
     },
     text: {
       primary: "#ffffff",
@@ -58,4 +77,5 @@ export const darkTheme = createTheme({
     },
   },
   typography,
+  components,
 });

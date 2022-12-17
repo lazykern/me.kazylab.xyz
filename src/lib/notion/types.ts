@@ -8,24 +8,17 @@ export interface LastEditedBy {
   id: string;
 }
 
-export interface File {
-  url: string;
-  expiry_time: Date;
-}
-
 export interface External {
   url: string;
 }
 
 export interface Cover {
   type: string;
-  file: File;
   external: External;
 }
 
 export interface Icon {
   type: string;
-  external: External;
   emoji: string;
 }
 
@@ -46,10 +39,18 @@ export interface MultiSelect {
   color: string;
 }
 
+export type Tag = MultiSelect;
+
 export interface Tags {
   id: string;
   type: string;
-  multi_select: MultiSelect[];
+  multi_select: Tag[];
+}
+
+export interface Date {
+  id: string;
+  type: string;
+  last_edited_time: string;
 }
 
 export interface Text {
@@ -81,7 +82,23 @@ export interface Name {
 }
 
 export interface Properties {
-  published: Published;
-  tags: Tags;
-  name: Name;
+  Published: Published;
+  Tags: Tags;
+  Date: Date;
+  Name: Name;
+}
+
+export interface BlogObjectResponse {
+  object: string;
+  id: string;
+  created_time: string;
+  last_edited_time: string;
+  created_by: CreatedBy;
+  last_edited_by: LastEditedBy;
+  cover?: Cover | null;
+  icon?: Icon | null;
+  parent: Parent;
+  archived: boolean;
+  properties: Properties;
+  url: string;
 }

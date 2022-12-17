@@ -10,14 +10,14 @@ export const notion = new Client({
 export const databaseId =
   process.env.NOTION_DATABASE_ID || "f7fafacb181940139b520d089a5e4fe4";
 
-export async function getBlogData() {
+export async function getBlogs() {
   const res = await notion.databases.query({
     database_id: databaseId,
   });
   return res.results;
 }
 
-export async function getPublishedBlogData() {
+export async function getPublishedBlogs() {
   const res = await notion.databases.query({
     database_id: databaseId,
     filter: {
