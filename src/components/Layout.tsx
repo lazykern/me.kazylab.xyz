@@ -18,14 +18,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <ThemeProvider theme={muiTheme}>
         <Fragment>
-          <Box sx={{ maxWidth: "1200px" }}>
+          <Box sx={{ maxWidth: "720px" }}>
             <NavBar />
           </Box>
           <Box
             sx={{
               marginTop: { xs: "0px", md: "64px" },
               marginBottom: { xs: "56px", md: "0px" },
-              maxWidth: "1200px",
+              maxWidth: "720px",
               marginX: "auto",
             }}
           >
