@@ -526,9 +526,9 @@
   max-width: 100%;
 }
 
-.notion-full-page {
-  padding-bottom: calc(max(10vh, 120px));
-}
+/* .notion-full-page { */
+/*   padding-bottom: calc(max(10vh, 120px)); */
+/* } */
 
 .notion-page-no-cover {
   margin-top: 48px !important;
