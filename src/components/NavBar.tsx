@@ -162,7 +162,11 @@ function NavBar() {
             >
               <Stack spacing={2}>
                 {pageData.map((page) => (
-                  <Link key={page.title} href={page.href}>
+                  <Link
+                    key={page.title}
+                    href={page.href}
+                    onClick={handleModalClose}
+                  >
                     <Button
                       sx={{
                         fontWeight: 700,
@@ -172,7 +176,6 @@ function NavBar() {
                             ? "var(--text-disabled)"
                             : "var(--primary)",
                       }}
-                      onClick={handleModalClose}
                     >
                       <Typography>{page.title}</Typography>
                     </Button>
