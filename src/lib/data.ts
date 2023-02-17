@@ -16,7 +16,7 @@ export const bioData: BioData = [
   },
   {
     key: "bio-3",
-    text: "Future Data Engineer at TCC Technology.",
+    text: "Future Data Engineer Intern at TCC Technology.",
   },
 ];
 
