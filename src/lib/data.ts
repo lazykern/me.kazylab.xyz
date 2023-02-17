@@ -8,7 +8,7 @@ export type BioData = Paragraph[];
 export const bioData: BioData = [
   {
     key: "bio-1",
-    text: "Specialize in data analysis, cloud computing, and data engineering (in progress).",
+    text: "Specialize in data analysis, cloud computing, and data engineering.",
   },
   {
     key: "bio-2",
@@ -16,7 +16,7 @@ export const bioData: BioData = [
   },
   {
     key: "bio-3",
-    text: "Open to work as a data engineer intern.",
+    text: "Future Data Engineer at TCC Technology.",
   },
 ];
 
