@@ -18,7 +18,7 @@ export default function Footer() {
           color: "var(--text-disabled)",
         }}
       >
-        © 2022 Phusit Somboonyingsuk
+        © {new Date().getFullYear()} Phusit Somboonyingsuk
       </Typography>
     </Box>
   );
