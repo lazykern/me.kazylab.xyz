@@ -1,7 +1,7 @@
 :root {
   --background: #fff;
   --foreground: #0f1419;
-  --primary: #3b57bb;
+  --primary: #0020e5;
   --secondary: #de4c7e;
   --text: #0f1419;
   --text-secondary: #0f1419;
@@ -45,7 +45,7 @@ a {
   box-sizing: border-box;
 }
 
-[data-theme="dark"] .invert-on-theme {
+[data-theme="dark"] .invert-on-dark {
   filter: invert(1);
 }
 

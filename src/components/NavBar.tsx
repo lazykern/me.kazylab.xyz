@@ -90,7 +90,6 @@ function NavBar() {
                   borderRadius: 0,
                 }}
                 alt="phusitsom"
-                className="invert-on-theme"
                 src="/images/icon.png"
               />
             </IconButton>

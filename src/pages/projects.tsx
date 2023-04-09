@@ -37,7 +37,7 @@ export default function Projects({
           siteName: "phusitsom - Projects",
           images: [
             {
-              url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1671302025/phusitsom.me/og-image-projects_zmnfxn.png",
+              url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1681018884/banner_cg0reu.png",
               width: 1200,
               height: 630,
               alt: "phusitsom.me - Projects",

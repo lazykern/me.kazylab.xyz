@@ -46,7 +46,7 @@ export default function Blog({
           siteName: "phusitsom - Blogs",
           images: [
             {
-              url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1671302036/phusitsom.me/og-image-blogs_lfjqfv.png",
+              url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1681018884/banner_cg0reu.png",
               width: 1200,
               height: 630,
               alt: "phusitsom.me - Blogs",

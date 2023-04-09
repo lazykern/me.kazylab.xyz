@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
                         siteName: "phusitsom",
                         images: [
                             {
-                                url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1671301788/phusitsom.me/og-image-default_ycdt9p.png",
+                                url: "https://res.cloudinary.com/dmkf8hcda/image/upload/v1681018884/banner_cg0reu.png",
                                 width: 1200,
                                 height: 630,
                                 alt: "phusitsom.me",

@@ -16,7 +16,7 @@ export const bioData: BioData = [
   },
   {
     key: "bio-3",
-    text: "Future Data Engineer Intern at TCC Technology.",
+    text: "Data Engineer Intern at TCC Technology.",
   },
 ];
 
@@ -59,10 +59,6 @@ export const pageData: PageData = [
   {
     title: "about",
     href: "/",
-  },
-  {
-    title: "blogs",
-    href: "/blogs",
   },
   {
     title: "projects",
