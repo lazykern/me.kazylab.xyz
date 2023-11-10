@@ -20,6 +20,9 @@ dependencies:
   '@mui/material':
     specifier: ^5.11.0
     version: 5.14.17(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
+  '@mui/system':
+    specifier: ^5.14.17
+    version: 5.14.17(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.37)(react@18.2.0)
   '@notionhq/client':
     specifier: ^2.2.2
     version: 2.2.13
