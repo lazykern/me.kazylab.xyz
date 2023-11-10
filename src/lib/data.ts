@@ -8,15 +8,15 @@ export type BioData = Paragraph[];
 export const bioData: BioData = [
   {
     key: "bio-1",
-    text: "Specialize in data analysis, cloud computing, and data engineering.",
+    text: "Phusit is a third year undergraduate computer engineering student at Kasetsart University based in Bangkok.",
   },
   {
     key: "bio-2",
-    text: "Loves to automate stuffs. Interested in Data Engineering and Software Engineering.",
+    text: "All his interest goes to Data (Platform) Engineering. To make a platform reliable and easy to maintain is his passion.",
   },
   {
     key: "bio-3",
-    text: "Data Engineer Intern at TCC Technology.",
+    text: "He loves doing photography, drawing pixel arts, making songs, and automating stuffs.",
   },
 ];
 
@@ -30,7 +30,7 @@ export type SkillsData = Skills[];
 export const skillsData: SkillsData = [
   {
     type: "Core",
-    skills: ["Data Analysis", "Data Engineering", "Cloud Computing"],
+    skills: ["Data Engineering", "Cloud Computing"],
   },
   {
     type: "Languages",

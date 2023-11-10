@@ -1,4 +1,4 @@
-import { ChevronRight } from "@mui/icons-material";
+import { ArrowRight } from "@mui/icons-material";
 import { Container, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { NextSeo } from "next-seo";
@@ -95,7 +95,7 @@ export default function Home() {
                       variant="body1"
                       sx={{ display: "inline-flex", alignItems: "center" }}
                     >
-                      <ChevronRight fontSize="small" />
+                      <ArrowRight fontSize="small" />
                       {skill}
                     </Typography>
                   ))}
