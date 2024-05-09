@@ -2,112 +2,89 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="w-screen h-12 px-32 py-8 fixed top-0 bg-black justify-start items-center inline-flex">
+        <div className="justify-start items-center gap-5 flex">
+          <img className="w-12 h-12" src="https://via.placeholder.com/50x50" />
+          <div className="text-white text-base font-bold font-['Inter']">
+            lazykern
+          </div>
+        </div>
+        <div className="flex gap-4 ml-auto">
+          <nav className="justify-end items-center gap-7 flex">
+            <ul className="flex gap-4">
+              <li className="text-right text-sm font-normal font-['Inter']">
+                ABOUT
+              </li>
+              <li className="text-right text-sm font-normal font-['Inter']">
+                SKILLS
+              </li>
+              <li className="text-right text-sm font-normal font-['Inter']">
+                INTERESTS
+              </li>
+              <li className="text-right text-sm font-normal font-['Inter']">
+                LINKS
+              </li>
+            </ul>
+          </nav>
+          <div>|</div>
+          <nav className="justify-start items-center gap-7 flex">
+            <ul className="flex gap-4">
+              <li className="text-right text-white text-sm font-normal font-['Inter']">
+                BLOG
+              </li>
+              <li className="text-right text-white text-sm font-normal font-['Inter']">
+                RESUME
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+      <main className="snap-y snap-proximity overflow-y-scroll h-screen z-0">
+        <div className="max-w-2xl px-10 md:px-0 mx-auto snap-center h-screen content-center">
+          <div className="justify-start items-end mb-2">
+            <div className="md:text-5xl text-3xl font-bold">
+              Phusit Somboonyingsuk
+            </div>
+            <div className="text-m font-bold">
+              AKA lazykern, kazylern, and phusitsom
+            </div>
+          </div>
+          <div className="self-stretch mb-4">
+            <span className="text-white text-m font-normal font-['Inria Sans']">
+              Hello, nice to meet you! You can call me Pooh or Keji (けじ). I am
+              a laid-back software engineer with many interests, not just nerdy
+              things but hobbies as well!
             </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          </div>
+          <div className="self-stretch flex-col justify-center items-start">
+            <div className="text-white text-2xl font-bold font-['Inter'] mb-2">
+              What I do
+            </div>
+            <div className="self-stretch mb-2">
+              <span className="text-white text-m font-normal font-['Inter']">
+                My background is mostly in Data Engineering, but I can do Web
+                Development and Mobile App Development as well!
+              </span>
+            </div>
+            <div className="self-stretch">
+              <span className="text-white text-m font-normal font-['Inter']">
+                Currently, I{"'"}m a{" "}
+              </span>
+              <span className="text-white text-m font-bold font-['Inter']">
+                DevOps Engineer Intern at Innovative Extremist (INOX){" "}
+              </span>
+              <span className="text-white text-m font-normal font-['Inter']">
+                and will continue as a Data Engineer Intern in the next few
+                months.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-2xl mx-auto snap-center h-screen content-center">
+          HI
+        </div>
+      </main>
+    </>
   );
 }
